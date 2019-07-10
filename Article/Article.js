@@ -201,8 +201,7 @@ function create(title, date, first, second, third) {
   ///event listener
   expandButton.addEventListener("click", () => {
     article.classList.toggle("article-open");
-    expandButton.textContent = 'close';
-
+    
   });
 
   return article;
