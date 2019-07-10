@@ -126,7 +126,7 @@ data.forEach(data => {
 function create(title){
   const article = document.createElement('div');
   const articleTitle = document.createElement('h2');
-  const date = document.createElement('p.date');
+  const articleDate = document.createElement('p.date');
   const firstPara = document.createElement('p');
   const secondPara = document.createElement('p');
   const thirdPara = document.createElement('p');
@@ -135,22 +135,21 @@ function create(title){
 
   ////setup structure of elements
   article.appendChild(articleTitle);
-  articleTitle.appendChild(date);
-  date.appendChild(firstPara);
+  articleTitle.appendChild(articleDate);
+  articleDate.appendChild(firstPara);
   firstPara.appendChild(secondPara);
   secondPara.appendChild(thirdPara);
-  expand.appendChild(thirdPara);
+  expand.appendChild(article);
 
   ////set class name
   article.classList.add('article');
   articleTitle.classList.add('h2')
-  date.classList.add('p.date');
+  articleDate.classList.add('p.date');
   firstPara.classList.add('p');
   secondPara.classList.add('p');
   thirdPara.classList.add('p');
 
   articleTitle.textContent = title
-  
 
   return article
 }
