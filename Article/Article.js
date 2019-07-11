@@ -201,7 +201,9 @@ function create(title, date, first, second, third) {
   ///event listener
   expandButton.addEventListener("click", () => {
     article.classList.toggle("article-open");
-    
+    if(article.classList.length > 1)
+    expandButton.innerText= 'collapse';
+   else expandButton.innerText = 'expand';
   });
 
   return article;
